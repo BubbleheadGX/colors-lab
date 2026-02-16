@@ -18,7 +18,8 @@ This website uses the LAMP stack, which is a very popular software stack. LAMP s
 9) Copy the contents of database.sql and paste to the command line, then hit enter.
 10) To add users, run "USE COP4331", then run "insert into Users (FirstName,LastName,Login,Password) VALUES ('replace with first name', 'replace with last name', 'replace with username, 'replace with password;);" (Note: Add your info to wherever it says "replace")
 11) Update index.js with your domain name or website's IP address
-12) Run the server if it isn't already running
+12) Update all .php files with your MySQL database information
+13) Run the server if it isn't already running
 
 ## How to Run/Access Website
 1) Start the Apache server
