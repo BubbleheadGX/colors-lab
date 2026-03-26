@@ -1,0 +1,31 @@
+@startuml
+hide empty methods
+skinparam classAttributeIconSize 0
+
+class Users {
+  ID : int <<PK>>
+  FirstName : varchar(50)
+  LastName : varchar(50)
+  Login : varchar(50)
+  Password : varchar(50)
+}
+
+class Colors {
+  ID : int <<PK>>
+  Name : varchar(50)
+  UserID : int <<FK>>
+}
+
+class Contacts {
+  ID : int <<PK>>
+  FirstName : varchar(50)
+  LastName : varchar(50)
+  Phone : varchar(50)
+  Email : varchar(50)
+  UserID : int <<FK>>
+}
+
+Users "1" -- "0..*" Colors : owns
+Users "1" -- "0..*" Contacts : manages
+
+@enduml
