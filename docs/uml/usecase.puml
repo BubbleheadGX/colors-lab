@@ -3,20 +3,25 @@ left to right direction
 
 actor User
 
-rectangle "COLORS Web App" {
+rectangle "Color App Website" {
+
   usecase "Log In" as UC1
-  usecase "Add Color" as UC2
-  usecase "Search Colors" as UC3
-  usecase "View Search Results" as UC4
+  usecase "Log Out" as UC2
+  usecase "Add Color" as UC3
+  usecase "Search Colors" as UC4
+  usecase "View Search Results" as UC5
 }
 
+' --- User interactions ---
 User --> UC1
 User --> UC2
 User --> UC3
 User --> UC4
+User --> UC5
 
-UC2 ..> UC1 : <<include>>
+' --- Includes (logic relationships) ---
 UC3 ..> UC1 : <<include>>
-UC3 ..> UC4 : <<include>>
+UC4 ..> UC1 : <<include>>
+UC4 ..> UC5 : <<include>>
 
 @enduml
